@@ -1,5 +1,7 @@
 # Deploy and Host Rybbit on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/rybbit-1?utm_medium=integration&utm_source=button&utm_campaign=rybbit)
+
 Rybbit is an open-source, privacy-friendly web and product analytics platform and a modern alternative to Google Analytics. A tiny script records pageviews, custom events, errors and web vitals without cookies, and dashboards show traffic, funnels, goals, journeys, retention, user profiles, session replay and real-time visitors.
 
 ## About Hosting Rybbit
