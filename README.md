@@ -6,7 +6,7 @@ Rybbit is an open-source, privacy-friendly web and product analytics platform an
 
 ## About Hosting Rybbit
 
-This template deploys Rybbit v2.9.2 as six services: the web client, the backend, ClickHouse for events, Railway Postgres, Railway Redis and a Caddy router that serves the client and API on one public domain. The client, backend, ClickHouse and router all build from one GitHub wrapper repository with pinned upstream images, so you get Railway's "update available" notice when the template is updated. On the first start the backend creates the admin account from its variables, and public sign-up stays disabled. ClickHouse is capped at 2 GB of memory, so plan for about 3 GB across all services.
+This template deploys Rybbit v2.9.3 as six services: the web client, the backend, ClickHouse for events, Railway Postgres, Railway Redis and a Caddy router that serves the client and API on one public domain. The client, backend, ClickHouse and router all build from one GitHub wrapper repository with pinned upstream images, so you get Railway's "update available" notice when the template is updated. On the first start the backend creates the admin account from its variables, and public sign-up stays disabled. ClickHouse is capped at 2 GB of memory, so plan for about 3 GB across all services.
 
 ## Common Use Cases
 
@@ -16,13 +16,13 @@ This template deploys Rybbit v2.9.2 as six services: the web client, the backend
 
 ## Dependencies for Rybbit Hosting
 
-* Rybbit backend and client v2.9.2 (`ghcr.io/rybbit-io/rybbit-backend`, `ghcr.io/rybbit-io/rybbit-client`), built from `aalfath/rybbit-railway-template`
+* Rybbit backend and client v2.9.3 (`ghcr.io/rybbit-io/rybbit-backend`, `ghcr.io/rybbit-io/rybbit-client`), built from `aalfath/rybbit-railway-template`
 * ClickHouse 26.3 with a volume, Railway Postgres with a volume, Railway Redis with a volume, and a Caddy router
 
 ### Deployment Dependencies
 
 * [Rybbit documentation](https://www.rybbit.io/docs)
-* [Rybbit v2.9.2 release](https://github.com/rybbit-io/rybbit/releases/tag/v2.9.2)
+* [Rybbit v2.9.3 release](https://github.com/rybbit-io/rybbit/releases/tag/v2.9.3)
 * [Tracking script](https://www.rybbit.io/docs/script)
 * [Wrapper repository and changelog](https://github.com/aalfath/rybbit-railway-template)
 
@@ -31,8 +31,8 @@ This template deploys Rybbit v2.9.2 as six services: the web client, the backend
 | Service | Built from | Networking | Storage |
 | --- | --- | --- | --- |
 | gateway | repo `gateway/` (Caddy 2.11.9) | public domain on 8080 | none |
-| client | repo `client/` (Rybbit client v2.9.2) | private, 3002 | none |
-| backend | repo root (Rybbit backend v2.9.2) | private, 3001 | none |
+| client | repo `client/` (Rybbit client v2.9.3) | private, 3002 | none |
+| backend | repo root (Rybbit backend v2.9.3) | private, 3001 | none |
 | clickhouse | repo `clickhouse/` (ClickHouse 26.3.17.4) | private, 8123 | volume at `/var/lib/clickhouse` |
 | Postgres / Redis | Railway databases | private only | volumes |
 
